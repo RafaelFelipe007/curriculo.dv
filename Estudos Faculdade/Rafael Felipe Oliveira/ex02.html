@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho</title>
+</head>
+<body>
+     <!-- 
+     2 Faça um script que solicite o número do mês em um prompt e 
+     mostre o nome do mês por extenso. 
+       Ex: 01 - Janeiro.
+       Utilize Array.
+     -->
+       
+
+    <script>
+        var calendario = ["Janeiro","Fevereiro","Março","Abril", "Maio","Junho","Julho","Agosto","Setembro","Outubro", "Novembro","Dezembro"];
+        var numeroscalendario = prompt("Digite o número do mês:");
+        numeroscalendario = parseInt(numeroscalendario) - 1;
+        if (numeroscalendario >= 0 && numeroscalendario <= 12) {
+            alert("O mês é: " + calendario[numeroscalendario]);
+        } else {
+            alert("Dado inválido! digite entre 01 e 12.");
+            var numeroscalendario = parse (prompt("Digite o número do mês:"));
+        }
+        </script>
+</body>
+</html>

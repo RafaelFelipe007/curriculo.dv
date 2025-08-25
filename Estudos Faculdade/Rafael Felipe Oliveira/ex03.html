@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho</title>
+</head>
+<body>
+    <!-- 
+    3) Usando Java Script, solicite um número em uma caixa prompt, este número não pode ser menor que 0, se for mostrar uma caixa de alerta para repetir o número.
+ 
+    Mostrar todos os números pares de 1 até o número digitado (inclusive), a quantidade de números pares e a soma dos números pares.
+
+    Exemplo:
+
+    Usuário digitou 10 na caixa prompt.
+
+    Mostrar:
+
+    Você digitou o número 10.
+    Números pares: 2, 4, 6, 8, 10.
+    Quantidade de pares: 5 números. 
+    Soma dos pares: 30.
+-->
+<script>
+
+var numero;
+var Pares = [];
+var totaldePares = 0;
+var somaPares = 0;
+
+numero = parseInt(prompt("Informe um numero >=0:"));
+
+while (numero < 0 || isNaN(numero)) {
+    alert(" O Numero não pode ser <0.");
+    numero = parseInt(prompt("Informe um numero >=0:"));
+}
+
+
+for (var i = 1; i <= numero; i++) {
+    if (i % 2 === 0) { 
+        Pares.push(i); 
+        totaldePares++; 
+        somaPares += i; 
+    }
+}
+
+alert(
+    "Você digitou o número " + numero + ".\n" +
+    "Números pares: " + Pares.join(", ") + ".\n" +
+    "Quantidade de pares: " + totaldePares + " números.\n" +
+    "Soma dos pares: " + somaPares + "."
+);
+</script>
+</body>
+</html>

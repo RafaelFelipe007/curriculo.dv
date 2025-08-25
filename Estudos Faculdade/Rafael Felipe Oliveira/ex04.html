@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ let nomesquantidades = parseInt(prompt("Informe a quantidade de nomes que deseja inserir na lista:"));
+
+ if (isNaN(nomesquantidades) || nomesquantidades <= 0) {
+    alert("Insira um número > 0.");
+} else {
+    let nomes = [];
+    for (let i = 0; i < nomesquantidades; i++) {
+    let nome = prompt(`Digite o nome ${i + 1}:`).trim();
+    if (nome) {
+    nomes.push(nome);
+    } else {
+        alert("Nome inválido.");
+        i--;
+        }
+    }
+    alert(`
+    Quantidade de nomes digitados: ${nomes.length}
+    Nomes na ordem digitada: ${nomes.join(", ")}
+    Nomes em ordem alfabética: ${[...nomes].sort().join(", ")}
+    Nomes em maiúsculas: ${nomes.map(nome => nome.toUpperCase()).join(", ")}
+    `);
+}
+</script>
+     
+    
+</body>
+</html>
