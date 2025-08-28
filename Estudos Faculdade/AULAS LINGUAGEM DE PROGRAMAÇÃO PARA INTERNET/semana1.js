@@ -10,3 +10,6 @@ const Home = () => {
   <ExibirTextoPersonalizado nome="Rafael" idade="23" />;
 };
 export default Home;
+/*
+ola
+*/
